@@ -19,8 +19,14 @@ patches:
 
 - patch: |-
     - op: replace
-      path: /spec/ports/0
-      value: '{"nodePort": 31759,"port":80,"targetPort":31759,name:"http",protocol:"TCP"}'
+      path: /spec/ports/0/targetport
+      value: 32258
+    - op: replace
+      path: /spec/ports/0/port
+      value: 80
+    - op: add
+      path: /spec/ports/0/name
+      value: http
   target:
     kind: Service
     name: golist-frontend
