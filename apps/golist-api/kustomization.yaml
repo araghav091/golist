@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: golist
 
 resources:
-- github.com/araghav091/golist-api/deploy
+- github.com/christianh814/golist-api/deploy
 - golist-api-ingress.yaml
 
 patches:
