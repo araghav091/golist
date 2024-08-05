@@ -11,7 +11,7 @@ patches:
 - patch: |-
     - op: replace
       path: /data/config.json
-      value: '{"api": "http://localhost:8080/api/products"}'
+      value: '{"api": "http://sriram/api/products"}'
   target:
     kind: ConfigMap
     name: golist-frontend-config
