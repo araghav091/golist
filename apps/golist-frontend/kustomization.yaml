@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: golist
 
 resources:
-- github.com/araghav091/golist-frontend/deploy
+- github.com/christianh814/golist-frontend/deploy
 - golist-frontend-ingress.yaml
 
 patches:
