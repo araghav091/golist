@@ -16,11 +16,16 @@ patches:
     kind: ConfigMap
     name: golist-frontend-config
     version: v1
-
 - patch: |-
     - op: replace
+      path: /spec/type
+      value: NodePort
+    - op: add
+      path: /spec/ports/0/nodePort
+      value: 33451
+    - op: replace
       path: /spec/ports/0/targetport
-      value: 32258
+      value: 33451
     - op: replace
       path: /spec/ports/0/port
       value: 80
