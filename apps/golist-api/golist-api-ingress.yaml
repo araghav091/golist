@@ -7,7 +7,7 @@ metadata:
   name: golist-api-ingress
 spec:
   ingressClassName: nginx
-  rules: 127.0.0.1
+  rules: localhost
   - host: 
     http:
       paths:
