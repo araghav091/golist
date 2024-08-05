@@ -4,14 +4,14 @@ kind: Kustomization
 namespace: golist
 
 resources:
-- github.com/christianh814/golist-frontend/deploy
+- github.com/araghav091/golist-frontend/deploy
 - golist-frontend-ingress.yaml
 
 patches:
 - patch: |-
     - op: replace
       path: /data/config.json
-      value: '{"api": "http://golist-api.7f000001.nip.io/api/products"}'
+      value: '{"api": "http://127.0.0.1:8080/api/products"}'
   target:
     kind: ConfigMap
     name: golist-frontend-config
