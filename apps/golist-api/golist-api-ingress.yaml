@@ -17,4 +17,4 @@ spec:
             service:
               name: golist-api
               port:
-                number: 32379
+                number: 8080
