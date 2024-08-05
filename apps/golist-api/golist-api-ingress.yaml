@@ -8,13 +8,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules: localhost
-  - host: 
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: golist-api
-            port:
-              number: 8080
+    - host: 
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: golist-api
+              port:
+                number: 8080
