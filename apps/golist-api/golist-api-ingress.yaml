@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
   name: golist-api-ingress
 spec:
-  ingressClassName: ""
+  ingressClassName: nginx
   rules: 
     - http:
         paths:
