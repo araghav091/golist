@@ -16,3 +16,12 @@ patches:
     kind: ConfigMap
     name: golist-frontend-config
     version: v1
+
+- patch: |-
+    - op: replace
+      path: /spec/ports/0
+      value: '{"nodePort": 31759,"port":80,"targetPort":31759,name:"http",protocol:"TCP"}'
+  target:
+    kind: Service
+    name: golist-frontend
+    version: v1
