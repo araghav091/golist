@@ -16,3 +16,12 @@ patches:
     kind: ConfigMap
     name: golist-api-config
     version: v1
+
+- patch: |-
+    - op: replace
+      path: /spec/ports/0
+      value: '{"nodePort": 32253,"port":80,"targetPort":32253,name:"http",protocol:"TCP"}'
+  target:
+    kind: Service
+    name: golist-api
+    version: v1
